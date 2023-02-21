@@ -193,8 +193,8 @@ li p {
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #04AA6D;
-  color: white;
+  /* background-color: #04AA6D; */
+  /* color: white; */
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -228,10 +228,13 @@ li p {
 .dropdown-content a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: absolute;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
 /*Profile Section*/
 .profile-section {
