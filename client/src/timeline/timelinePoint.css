@@ -1,0 +1,7 @@
+.timeline_point {
+    width: 12.5px;
+    height: 12.5px;
+    background-color: white;
+    border: 4px solid #007FFF;
+    border-radius: 50%;
+}
