@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend for International Interactive Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smc8501/InternationalInteractiveDashboard.git"
+  },
+  "author": "J.A.R.V.I.T Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smc8501/InternationalInteractiveDashboard/issues"
+  },
+  "homepage": "https://github.com/smc8501/InternationalInteractiveDashboard#readme"
+}
