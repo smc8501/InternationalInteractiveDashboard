@@ -1,4 +1,4 @@
-import PasswordField from '../Components/PasswordField';
+import PasswordField from '../../pages/Components/PasswordField.jsx';
 
 export default RegisterForm;
 function RegisterForm() {

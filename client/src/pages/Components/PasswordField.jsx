@@ -1,4 +1,3 @@
-export default PasswordField;
 
 function PasswordField() {
     return (
@@ -10,3 +9,5 @@ function PasswordField() {
         
     );
 }
+
+export default PasswordField;
