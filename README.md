@@ -8,3 +8,13 @@ How to work in GitHub as a Team:
 * Now execute `git commit -m "[meaningful message about the work you have done]" '[filename]'`
 * Then to put all the changes to the remote repository in GitHub execute `git push [branch name]`
 * Once you have done this, please reach out to the team so that everyone's local repository is up to date by executing `git pull`.
+
+FrontEnd Set Up
+
+For the project to run on your computers:
+* Install Node.js (go to Node.js webpage)
+* Install react and react-dom (`npm i react react-dom`)
+
+Backend Set Up
+* Install express (`npm i express`)
+* Install nodemon (`npm i nodemon -D`)
