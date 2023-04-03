@@ -1,23 +1,23 @@
-import PasswordField from "../Components/PasswordField";
+
+import FormInput from "../Components/FormInput";
+
 
 function LoginForm() {
     return (
-        <form action="#" method="post">
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required></input>
-                <PasswordField />
 
+        <div className="Container">
+            <form action="#" method="POST">
+                <FormInput placeholder="Username" />
+                <FormInput placeholder="Password"/>
                 <button type="submit">Login</button>
                 <label>
-                    <input type="checkbox" checked="checked" name="remember">Remember me</input>
+                    <b>Remember me</b>
+                    <input type="checkbox" checked="checked" name="remember"/>
                 </label>
-                <div class="container" style="backgorund-color:#f1f1f1">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
 
     );
 }
+
+export default LoginForm;

@@ -1,16 +1,21 @@
 // Any jsx or css files that need to be linked here have to be imported.
-
+import { Outlet, Link } from "react-router-dom";
 import './App.css';
-import TimelinePoint from './timeline/TimelinePoint.jsx';
-import RegisterForm from './registerPage/RegisterForm.jsx';
-
 function App() {
   return (
-    <div className="App">
-      {/* This is the entry point for the frontend */}
-      <h1>International Interactive Dashboard</h1>
-      {/* <TimelinePoint /> */}
-      <RegisterForm />
+    <div class="container">
+      <h1>International Student Dashboard</h1>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Log In</Link>
+          </li>
+          <li>
+            <Link to="/registerform">Register</Link>
+          </li>
+        </ul>
+        <Outlet />
+      </nav>
     </div>
   );
 }
