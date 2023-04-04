@@ -1,19 +1,8 @@
 const express = require('express');
-const {json, urlencoded} = express;
 const dotenv = require('dotenv').config();
 const app = express();
 const {mongoose} = require('mongoose');
-const expressValidator = require("express-validator");
 
-//middleware
-app.use(json());
-app.use(urlencoded({extneded: false}));
-app.use(expressValidator());
-
-// routes
-
-const userRoutes = require('./routes/user.js')
-app.use("/", userRoutes);
 
 // db
 mongoose
