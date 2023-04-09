@@ -6,15 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import LoginForm from './pages/loginPage/LoginForm';
 import RegisterForm from './pages/registerPage/RegisterForm';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import IntStudentDashboard from './pages/dashboards/IntStudentDashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
+          <Route path="/" element={<App />}/> 
+          {/* Line 16 not working */}
           <Route index element={<LoginForm />}/>
           <Route path="registerform" element={<RegisterForm />}/>
+          <Route path="loginform" element={<LoginForm/>}/>
+          <Route path="InternationalStudentDashboard" element={<IntStudentDashboard />}>
         </Route>
       </Routes>
     </BrowserRouter>

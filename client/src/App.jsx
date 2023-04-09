@@ -3,9 +3,9 @@ import { Outlet, Link } from "react-router-dom";
 import './App.css';
 function App() {
   return (
-    <div class="container">
+    <div className="container">
       <h1>International Student Dashboard</h1>
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Log In</Link>
@@ -15,7 +15,7 @@ function App() {
           </li>
         </ul>
         <Outlet />
-      </nav>
+      </nav> */}
     </div>
   );
 }
