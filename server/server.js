@@ -108,6 +108,6 @@ app.post('/loginform', async (req, res) => {
     } catch(err) {
         res.json("doesn't exist");
     }
-});
+
 //The port that the server is listening to
 app.listen(4000, () => {console.log("Server started on port 4000")});
