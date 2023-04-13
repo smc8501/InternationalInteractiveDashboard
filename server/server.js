@@ -95,8 +95,6 @@ app.post('/loginform', async (req, res) => {
         console.log(error);
         res.status(500).json({message: 'Server error' });
     }
-});
-
     try {
         const check=await internationalStudentCollection.findOne({username:username});
         if (check) {
@@ -108,6 +106,7 @@ app.post('/loginform', async (req, res) => {
     } catch(err) {
         res.json("doesn't exist");
     }
+});
 
 //The port that the server is listening to
 app.listen(4000, () => {console.log("Server started on port 4000")});
