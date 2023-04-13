@@ -13,12 +13,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-          <Route path="/" element={<App />}/> 
-          {/* Line 16 not working */}
+        <Route path="/" element={<App />}/>
           <Route index element={<LoginForm />}/>
           <Route path="registerform" element={<RegisterForm />}/>
           <Route path="loginform" element={<LoginForm/>}/>
-          <Route path="InternationalStudentDashboard" element={<IntStudentDashboard />}>
+          <Route path="internationalstudentdashboard" element={<IntStudentDashboard />}>
         </Route>
       </Routes>
     </BrowserRouter>

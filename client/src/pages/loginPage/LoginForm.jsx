@@ -1,63 +1,27 @@
 
-import FormInput from "../Components/FormInput";
+// import FormInput from "../Components/FormInput";
 import { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 
 
 function LoginForm() {
     const history=useNavigate();
-    const [loginValues, setLoginValues] = useState({
-        username: "",
-        password: "",
-    });
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-    const loginInputs = [
-        {
-            id:1,
-            name:"username",
-            type:"text",
-            placeholder:"Username",
-            errorMessage:"Incorrect Username.",
-            label:"username"
-        },
-        {
-            id:2,
-            name:"password",
-            type:"password",
-            placeholder:"password",
-            errorMessage:"Incorrect Password.",
-            label:"password"
-        }
-    ]
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const data = new FormData(e.target);
         try {
-            await axios.post("http://localhost:4000/",
-                data.entries()
-            )
-            .then(res=>{
-                if(res.data==="exist") {
-                    // alert("User already exists")
-                    history("/InternationalStudentDashboard",{state:loginInputs.name} )
-                }
-                else if(res.data==="doesn't exist") {
-                    alert("User has not registered");
-                }
-            })
-            .catch(e=> {
-                alert("wrong details")
-                console.log(e);
-            })
+            await axios.post("http://localhost:4000/loginform", {username, password
+        }).then (
+            history("/internationalstudentdashboard", {state:{id:username}})
+        )
         } catch (error) {
-            console.log(e);
+            console.log(error);
         }
-        console.log(Object.fromEntries(data.entries()));
     }
-    const onChange = (e) => {
-        setLoginValues({...loginValues, [e.target.name]: e.target.value});
-    }
+
     return (
 
         <div className="Container">
@@ -65,9 +29,9 @@ function LoginForm() {
                 <h1>Log In</h1>
                 <p>Please log in to continue your university application with us.</p>
                 <hr></hr>
-                {loginInputs.map((input) => (                
-                    <FormInput key={input.id} {...input} onChange={onChange}/>
-                ))}
+                <input type="text" onChange={(e) => {setUsername(e.target.value)}} placeholder="Username" id="username"/><br></br>
+                <input type="password" onChange={(e) => {setPassword(e.target.value)}} placeholder="Password" id="password"/><br></br>
+              
                 <button type="submit">Login</button>
                 <label>
                     <b>Remember me</b>

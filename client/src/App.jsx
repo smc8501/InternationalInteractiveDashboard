@@ -1,5 +1,4 @@
 // Any jsx or css files that need to be linked here have to be imported.
-import { Outlet, Link } from "react-router-dom";
 import './App.css';
 function App() {
   return (
