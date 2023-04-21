@@ -18,8 +18,7 @@ root.render(
               <Route index element={<LoginForm />}/>
               <Route path="registerform" element={<RegisterForm />}/>
               <Route path="loginform" element={<LoginForm/>}/>
-              <Route path="internationalstudentdashboard" element={<IntStudentDashboard />}>
-            </Route>
+              <Route path="internationalstudentdashboard" element={<IntStudentDashboard />}/>
           </Routes>
         </BrowserRouter>
   
