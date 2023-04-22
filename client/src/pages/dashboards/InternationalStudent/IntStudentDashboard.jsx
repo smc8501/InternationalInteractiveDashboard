@@ -1,5 +1,6 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link} from 'react-router-dom';
 import { Container, Grid, Box } from '@mui/material';
+import SideNavBar from '../../Components/SideNavBar';
 
 import './intStudentDashboard.css';
 
@@ -9,6 +10,7 @@ function IntStudentDashboard() {
     const location = useLocation();
     return (
         <Container maxWidth="lg">
+            {/* <SideNavBar/> */}
             <Grid container spacing={2}>
                 <Grid item xs={30}>
                     {/* Welcome Banner */}
@@ -31,6 +33,7 @@ function IntStudentDashboard() {
                         borderRadius: '20px',
                     }}>
                         <h1 style={{marginLeft: '20px'}}>Your progress</h1>
+                        <Link to="/applicationform">Application Form</Link>
                     </Box>
                 </Grid>
                 <Grid item xs={30}>
