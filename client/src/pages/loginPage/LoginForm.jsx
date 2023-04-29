@@ -30,8 +30,8 @@ function LoginForm() {
                 <h1>Log In</h1>
                 <p>Please log in to continue your university application with us.</p>
                 <hr></hr>
-                <input type="text" onChange={(e) => {setUsername(e.target.value)}} placeholder="Username" id="username"/><br></br>
-                <input type="password" onChange={(e) => {setPassword(e.target.value)}} placeholder="Password" id="password"/><br></br>
+                <input type="text" onChange={(e) => {setUsername(e.target.value)}} placeholder="Username" id="username" required/><br></br>
+                <input type="password" onChange={(e) => {setPassword(e.target.value)}} placeholder="Password" id="password" required/><br></br>
               
                 <button type="submit">Login</button>
                 <label>
