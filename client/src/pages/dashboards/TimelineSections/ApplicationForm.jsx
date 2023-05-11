@@ -1,26 +1,15 @@
 import { useNavigate } from 'react-router-dom'
-import axios from "axios";
+
 function ApplicationForm() {
     const history=useNavigate();
-    const onOptionChangeHandler = (e) => {
-        console.log("User Selected Value - ", e.target.value);
-
-    }
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         await axios.post("http://localhost:4000/applicationform", );
-    //     }
-    // }
-    
+ 
 
     return (
         <div className="container">
             <div className="CourseDetails">
                 <h1>1. Course Details</h1><br></br>
                 <label>Please select a Course</label><br></br>
-                <select onChange={onOptionChangeHandler}className="CourseOptions" name="courseOptions" defaultValue={'DEFAULT'}>
+                <select className="CourseOptions" name="courseOptions" defaultValue={'DEFAULT'}>
                     <option value="DEFAULT" disabled selected>Select</option>
                     <option value="1">BSc Computer Science</option>
                     <option value="2">BSc Food Science</option>

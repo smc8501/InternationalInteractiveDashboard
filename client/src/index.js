@@ -8,6 +8,7 @@ import RegisterForm from './pages/registerPage/RegisterForm';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import IntStudentDashboard from './pages/dashboards/InternationalStudent/IntStudentDashboard';
 import ApplicationForm from './pages/dashboards/TimelineSections/ApplicationForm';
+import InitialDepositPayment from './pages/dashboards/TimelineSections/InitialDepositPayment';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
               <Route path="loginform" element={<LoginForm/>}/>
               <Route path="internationalstudentdashboard" element={<IntStudentDashboard />}/>
               <Route path="applicationform" element={<ApplicationForm />}/>
+              <Route path="initialdepositpayment" element={<InitialDepositPayment />}/>
           </Routes>
         </BrowserRouter>
   

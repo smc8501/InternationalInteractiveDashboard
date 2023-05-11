@@ -3,6 +3,7 @@ import { Container, Grid, Box } from '@mui/material';
 import SideNavBar from '../../Components/SideNavBar';
 
 import './intStudentDashboard.css';
+import HorizontalTimeline from '../TimelineSections/HorizontalTimeline';
 
 
 
@@ -15,7 +16,7 @@ function IntStudentDashboard() {
                 <Grid item xs={30}>
                     {/* Welcome Banner */}
                     <Box sx={{
-                        width: 900,
+                        width: 1200,
                         height: 150,
                         backgroundColor: '#3f51b5',
                         borderRadius: '20px',
@@ -27,19 +28,19 @@ function IntStudentDashboard() {
                 <Grid item xs={30}>
                     {/* Timeline section */}
                     <Box sx={{
-                        width: 900,
+                        width: 1200,
                         height: 300,
                         backgroundColor: '#ffffff',
                         borderRadius: '20px',
                     }}>
                         <h1 style={{marginLeft: '20px'}}>Your progress</h1>
-                        <Link to="/applicationform">Application Form</Link>
+                        <HorizontalTimeline />
                     </Box>
                 </Grid>
                 <Grid item xs={30}>
                     {/* Upcoming Deadlines section */}
                     <Box sx={{
-                        width: 900,
+                        width: 1200,
                         height: 150,
                         backgroundColor: '#ffffff',
                         borderRadius: '20px',
@@ -47,6 +48,9 @@ function IntStudentDashboard() {
                     }}>
                         <h1 style={{marginLeft: '20px'}}>Upcoming Deadlines</h1>
                     </Box>
+                </Grid>
+                <Grid item xs={20}>
+                    <button type="button" style={{height: '50px', marginLeft: '950px'}}>Chat with us!</button>
                 </Grid>
             </Grid>
         </Container>
