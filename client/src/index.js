@@ -9,6 +9,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import IntStudentDashboard from './pages/dashboards/InternationalStudent/IntStudentDashboard';
 import ApplicationForm from './pages/dashboards/TimelineSections/ApplicationForm';
 import InitialDepositPayment from './pages/dashboards/TimelineSections/InitialDepositPayment';
+import VisaInfo from './pages/dashboards/TimelineSections/VisaInfo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
               <Route path="internationalstudentdashboard" element={<IntStudentDashboard />}/>
               <Route path="applicationform" element={<ApplicationForm />}/>
               <Route path="initialdepositpayment" element={<InitialDepositPayment />}/>
+              <Route path="visainfo" element={<VisaInfo />} />
           </Routes>
         </BrowserRouter>
   

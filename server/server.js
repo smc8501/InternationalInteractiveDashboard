@@ -95,17 +95,6 @@ app.post('/loginform', async (req, res) => {
         console.log(error);
         res.status(500).json({message: 'Server error' });
     }
-    // try {
-    //     const check=await internationalStudentCollection.findOne({username:username});
-    //     if (check) {
-    //         res.json("exist");
-    //     } else {
-    //         res.json("doesn't exist");
-    //         await internationalStudentCollection.insertMany([data])
-    //     }
-    // } catch(err) {
-    //     res.json("doesn't exist");
-    // }
 });
 
 //The port that the server is listening to

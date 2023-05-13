@@ -1,11 +1,10 @@
+
 import { useLocation, useNavigate, Link} from 'react-router-dom';
 import { Container, Grid, Box } from '@mui/material';
 import SideNavBar from '../../Components/SideNavBar';
 
 import './intStudentDashboard.css';
 import HorizontalTimeline from '../TimelineSections/HorizontalTimeline';
-
-
 
 function IntStudentDashboard() {
     const location = useLocation();
@@ -21,9 +20,9 @@ function IntStudentDashboard() {
                         backgroundColor: '#3f51b5',
                         borderRadius: '20px',
                     }}>
-                        <h1 style={{color: '#ffffff', float: 'left', marginTop: '50px', marginLeft: '50px'}}>Welcome {location.state.id} to your dashboard</h1>
+                        <h1 style={{color: '#ffffff', float: 'left', marginTop: '50px', marginLeft: '50px'}}>
+                            Welcome {location.state.id} to your dashboard</h1>
                     </Box>
-                    
                 </Grid>
                 <Grid item xs={30}>
                     {/* Timeline section */}
@@ -56,5 +55,4 @@ function IntStudentDashboard() {
         </Container>
     )
 }
-
 export default IntStudentDashboard;
